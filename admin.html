@@ -1,34 +1,341 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Admin Console — Apex Polycoat Solutions</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="assets/admin.css">
-  <script src="assets/admin.js" defer></script>
-</head>
-<body class="admin-body">
-  <section class="admin-auth" id="authShell">
-    <div class="auth-visual"><a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-copy"><strong>Apex Polycoat</strong><span>Material solutions</span></span></a><div><p class="eyebrow light">Administration</p><blockquote>Shape the catalogue.<br>Keep the story current.</blockquote></div><small>Secure company console</small></div>
-    <div class="auth-panel"><form class="auth-card" id="authForm"><span class="admin-kicker" id="authKicker">Protected access</span><h1 id="authTitle">Welcome back.</h1><p id="authCopy">Enter your administrator password to continue.</p><div class="admin-field"><label for="authPassword">Password</label><input id="authPassword" type="password" autocomplete="current-password" required minlength="10"></div><div class="admin-field is-hidden" id="confirmField"><label for="authConfirm">Confirm password</label><input id="authConfirm" type="password" autocomplete="new-password" minlength="10"></div><p class="admin-error" id="authError" role="alert"></p><button class="btn btn-dark admin-submit" type="submit" id="authButton">Sign in</button><a class="auth-home" href="index.html">← Return to website</a></form></div>
-  </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin Console — Apex Polycoat Solutions</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/admin.css" />
+    <script src="assets/admin.js" defer></script>
+  </head>
+  <body class="admin-body">
+    <section class="admin-auth" id="authShell">
+      <div class="auth-visual">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">A</span
+          ><span class="brand-copy"
+            ><strong>Apex Polycoat</strong><span>Material solutions</span></span
+          ></a
+        >
+        <div>
+          <p class="eyebrow light">Administration</p>
+          <blockquote>
+            Shape the catalogue.<br />Keep the story current.
+          </blockquote>
+        </div>
+        <small>Secure company console</small>
+      </div>
+      <div class="auth-panel">
+        <form class="auth-card" id="authForm">
+          <span class="admin-kicker" id="authKicker">Protected access</span>
+          <h1 id="authTitle">Welcome back.</h1>
+          <p id="authCopy">Enter your administrator password to continue.</p>
+          <div class="admin-field">
+            <label for="authPassword">Password</label
+            ><input
+              id="authPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+              minlength="10"
+            />
+          </div>
+          <div class="admin-field is-hidden" id="confirmField">
+            <label for="authConfirm">Confirm password</label
+            ><input
+              id="authConfirm"
+              type="password"
+              autocomplete="new-password"
+              minlength="10"
+            />
+          </div>
+          <p class="admin-error" id="authError" role="alert"></p>
+          <button
+            class="btn btn-dark admin-submit"
+            type="submit"
+            id="authButton"
+          >
+            Sign in</button
+          ><a class="auth-home" href="index.html">← Return to website</a>
+        </form>
+      </div>
+    </section>
 
-  <div class="admin-app is-hidden" id="adminApp">
-    <aside class="admin-sidebar"><a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-copy"><strong>Apex Polycoat</strong><span>Admin console</span></span></a><nav class="admin-nav"><button class="active" data-admin-tab="products"><span>01</span>Products</button><button data-admin-tab="site"><span>02</span>Site details</button><button data-admin-tab="security"><span>03</span>Security</button></nav><div class="admin-side-bottom"><a href="index.html" target="_blank">View live website ↗</a><button data-logout>Sign out</button></div></aside>
-    <main class="admin-main">
-      <header class="admin-topbar"><div><span class="admin-kicker">Apex content manager</span><h1 id="sectionTitle">Products</h1></div><div class="admin-top-actions"><div class="admin-status"><span></span>Authenticated</div><button class="admin-logout" type="button" data-logout>Logout</button></div></header>
+    <div class="admin-app is-hidden" id="adminApp">
+      <aside class="admin-sidebar">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">A</span
+          ><span class="brand-copy"
+            ><strong>Apex Polycoat</strong><span>Admin console</span></span
+          ></a
+        >
+        <nav class="admin-nav">
+          <button class="active" data-admin-tab="products">
+            <span>01</span>Products</button
+          ><button data-admin-tab="site"><span>02</span>Site details</button
+          ><button data-admin-tab="security"><span>03</span>Security</button>
+        </nav>
+        <div class="admin-side-bottom">
+          <a href="index.html" target="_blank">View live website ↗</a
+          ><button data-logout>Sign out</button>
+        </div>
+      </aside>
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <div>
+            <span class="admin-kicker">Apex content manager</span>
+            <h1 id="sectionTitle">Products</h1>
+          </div>
+          <div class="admin-top-actions">
+            <div class="admin-status"><span></span>Authenticated</div>
+            <button class="admin-logout" type="button" data-logout>
+              Logout
+            </button>
+          </div>
+        </header>
 
-      <section class="admin-section" data-admin-panel="products"><div class="admin-section-head"><div><h2>Material catalogue</h2><p>Add, edit, reorder or remove products shown on the public products page.</p></div><button class="admin-primary" id="addProductButton">+ Add product</button></div><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Material</th><th>Category</th><th>Code</th><th>Order</th><th></th></tr></thead><tbody id="productRows"></tbody></table><div class="admin-empty is-hidden" id="productEmpty">No products yet. Add your first material.</div></div></section>
+        <section class="admin-section" data-admin-panel="products">
+          <div class="admin-section-head">
+            <div>
+              <h2>Material catalogue</h2>
+              <p>
+                Add, edit, reorder or remove products shown on the public
+                products page.
+              </p>
+            </div>
+            <button class="admin-primary" id="addProductButton">
+              + Add product
+            </button>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Category</th>
+                  <th>Code</th>
+                  <th>Order</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="productRows"></tbody>
+            </table>
+            <div class="admin-empty is-hidden" id="productEmpty">
+              No products yet. Add your first material.
+            </div>
+          </div>
+        </section>
 
-      <section class="admin-section is-hidden" data-admin-panel="site"><div class="admin-section-head"><div><h2>Company details</h2><p>These details update across the website wherever the corresponding field is displayed.</p></div></div><form class="admin-card-form" id="siteForm"><div class="admin-form-grid"><div class="admin-field"><label for="companyName">Company name</label><input id="companyName" name="company_name" required maxlength="120"></div><div class="admin-field"><label for="siteEmail">Public email</label><input id="siteEmail" name="email" type="email" maxlength="160" placeholder="sales@example.com"></div><div class="admin-field"><label for="sitePhone">Public phone</label><input id="sitePhone" name="phone" maxlength="80" placeholder="+91 …"></div><div class="admin-field full"><label for="siteAddress">Address</label><textarea id="siteAddress" name="address" maxlength="500" placeholder="Company or factory address"></textarea></div><div class="admin-field full"><label for="footerDescription">Footer description</label><textarea id="footerDescription" name="footer_description" maxlength="300"></textarea></div></div><p class="admin-error" id="siteError"></p><div class="admin-form-actions"><button class="admin-primary" type="submit">Save site details</button></div></form></section>
+        <section class="admin-section is-hidden" data-admin-panel="site">
+          <div class="admin-section-head">
+            <div>
+              <h2>Company details</h2>
+              <p>
+                These details update across the website wherever the
+                corresponding field is displayed.
+              </p>
+            </div>
+          </div>
+          <form class="admin-card-form" id="siteForm">
+            <div class="admin-form-grid">
+              <div class="admin-field">
+                <label for="companyName">Company name</label
+                ><input
+                  id="companyName"
+                  name="company_name"
+                  required
+                  maxlength="120"
+                />
+              </div>
+              <div class="admin-field">
+                <label for="siteEmail">Public email</label
+                ><input
+                  id="siteEmail"
+                  name="email"
+                  type="email"
+                  maxlength="160"
+                  placeholder="sales@example.com"
+                />
+              </div>
+              <div class="admin-field">
+                <label for="sitePhone">Public phone</label
+                ><input
+                  id="sitePhone"
+                  name="phone"
+                  maxlength="80"
+                  placeholder="+91 …"
+                />
+              </div>
+              <div class="admin-field full">
+                <label for="siteAddress">Address</label
+                ><textarea
+                  id="siteAddress"
+                  name="address"
+                  maxlength="500"
+                  placeholder="Company or factory address"
+                ></textarea>
+              </div>
+              <div class="admin-field full">
+                <label for="footerDescription">Footer description</label
+                ><textarea
+                  id="footerDescription"
+                  name="footer_description"
+                  maxlength="300"
+                ></textarea>
+              </div>
+            </div>
+            <p class="admin-error" id="siteError"></p>
+            <div class="admin-form-actions">
+              <button class="admin-primary" type="submit">
+                Save site details
+              </button>
+            </div>
+          </form>
+        </section>
 
-      <section class="admin-section is-hidden" data-admin-panel="security"><div class="admin-section-head"><div><h2>Security</h2><p>Change the administrator password. All existing sessions will be signed out.</p></div></div><form class="admin-card-form narrow" id="passwordForm"><div class="admin-field"><label for="currentPassword">Current password</label><input id="currentPassword" type="password" autocomplete="current-password" required></div><div class="admin-field"><label for="newPassword">New password</label><input id="newPassword" type="password" autocomplete="new-password" required minlength="10"><small>Use at least 10 characters.</small></div><div class="admin-field"><label for="confirmPassword">Confirm new password</label><input id="confirmPassword" type="password" autocomplete="new-password" required minlength="10"></div><p class="admin-error" id="passwordError"></p><div class="admin-form-actions"><button class="admin-primary" type="submit">Update password</button></div></form></section>
-    </main>
-  </div>
+        <section class="admin-section is-hidden" data-admin-panel="security">
+          <div class="admin-section-head">
+            <div>
+              <h2>Security</h2>
+              <p>
+                Change the administrator password. All existing sessions will be
+                signed out.
+              </p>
+            </div>
+          </div>
+          <form class="admin-card-form narrow" id="passwordForm">
+            <div class="admin-field">
+              <label for="currentPassword">Current password</label
+              ><input
+                id="currentPassword"
+                type="password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+            <div class="admin-field">
+              <label for="newPassword">New password</label
+              ><input
+                id="newPassword"
+                type="password"
+                autocomplete="new-password"
+                required
+                minlength="10"
+              /><small>Use at least 10 characters.</small>
+            </div>
+            <div class="admin-field">
+              <label for="confirmPassword">Confirm new password</label
+              ><input
+                id="confirmPassword"
+                type="password"
+                autocomplete="new-password"
+                required
+                minlength="10"
+              />
+            </div>
+            <p class="admin-error" id="passwordError"></p>
+            <div class="admin-form-actions">
+              <button class="admin-primary" type="submit">
+                Update password
+              </button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
 
-  <dialog class="product-dialog" id="productDialog"><form class="dialog-card" id="productForm"><header><div><span class="admin-kicker">Catalogue item</span><h2 id="dialogTitle">Add product</h2></div><button class="dialog-close" id="dialogClose" type="button" aria-label="Close">×</button></header><input type="hidden" id="productId"><div class="admin-form-grid"><div class="admin-field"><label for="productName">Product name *</label><input id="productName" required maxlength="80"></div><div class="admin-field"><label for="productCode">Product code *</label><input id="productCode" required maxlength="30" placeholder="APX 500"></div><div class="admin-field"><label for="productCategory">Category *</label><select id="productCategory" required><option value="automotive">Automotive</option><option value="furnishing">Furnishing</option><option value="footwear">Footwear</option><option value="lifestyle">Lifestyle</option></select></div><div class="admin-field"><label for="productSwatch">Swatch colour *</label><div class="color-field"><input id="productSwatch" type="color" value="#a64128"><input id="productSwatchText" value="#a64128" maxlength="7" pattern="#[0-9a-fA-F]{6}"></div></div><div class="admin-field full"><label for="productDescription">Description *</label><textarea id="productDescription" required maxlength="500"></textarea></div><div class="admin-field full"><label for="productProperties">Properties</label><input id="productProperties" maxlength="300" placeholder="Soft touch, Fine grain, Durable"><small>Separate properties with commas.</small></div><div class="admin-field"><label for="productOrder">Display order</label><input id="productOrder" type="number" min="0" max="9999" value="0"></div></div><p class="admin-error" id="productError"></p><footer><button class="admin-secondary" id="dialogCancel" type="button">Cancel</button><button class="admin-primary" type="submit">Save product</button></footer></form></dialog>
-  <div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
-</body>
+    <dialog class="product-dialog" id="productDialog">
+      <form class="dialog-card" id="productForm">
+        <header>
+          <div>
+            <span class="admin-kicker">Catalogue item</span>
+            <h2 id="dialogTitle">Add product</h2>
+          </div>
+          <button
+            class="dialog-close"
+            id="dialogClose"
+            type="button"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </header>
+        <input type="hidden" id="productId" />
+        <div class="admin-form-grid">
+          <div class="admin-field">
+            <label for="productName">Product name *</label
+            ><input id="productName" required maxlength="80" />
+          </div>
+          <div class="admin-field">
+            <label for="productCode">Product code *</label
+            ><input
+              id="productCode"
+              required
+              maxlength="30"
+              placeholder="APX 500"
+            />
+          </div>
+          <div class="admin-field">
+            <label for="productCategory">Category *</label
+            ><select id="productCategory" required>
+              <option value="automotive">Automotive</option>
+              <option value="furnishing">Furnishing</option>
+              <option value="footwear">Footwear</option>
+              <option value="lifestyle">Lifestyle</option>
+            </select>
+          </div>
+          <div class="admin-field">
+            <label for="productSwatch">Swatch colour *</label>
+            <div class="color-field">
+              <input id="productSwatch" type="color" value="#a64128" /><input
+                id="productSwatchText"
+                value="#a64128"
+                maxlength="7"
+                pattern="#[0-9a-fA-F]{6}"
+              />
+            </div>
+          </div>
+          <div class="admin-field full">
+            <label for="productDescription">Description *</label
+            ><textarea
+              id="productDescription"
+              required
+              maxlength="500"
+            ></textarea>
+          </div>
+          <div class="admin-field full">
+            <label for="productProperties">Properties</label
+            ><input
+              id="productProperties"
+              maxlength="300"
+              placeholder="Soft touch, Fine grain, Durable"
+            /><small>Separate properties with commas.</small>
+          </div>
+          <div class="admin-field">
+            <label for="productOrder">Display order</label
+            ><input
+              id="productOrder"
+              type="number"
+              min="0"
+              max="9999"
+              value="0"
+            />
+          </div>
+        </div>
+        <p class="admin-error" id="productError"></p>
+        <footer>
+          <button class="admin-secondary" id="dialogCancel" type="button">
+            Cancel</button
+          ><button class="admin-primary" type="submit">Save product</button>
+        </footer>
+      </form>
+    </dialog>
+    <div
+      class="admin-toast"
+      id="adminToast"
+      role="status"
+      aria-live="polite"
+    ></div>
+  </body>
 </html>

@@ -1,25 +1,286 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore Apex Polycoat Solutions' leatherette collections for automotive, furnishing, footwear and lifestyle applications."><title>Products — Apex Polycoat Solutions</title><link rel="stylesheet" href="assets/styles.css"><script src="assets/script.js" defer></script></head>
-<body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-copy"><strong>Apex Polycoat</strong><span>Material solutions</span></span></a><nav class="desktop-nav"><a href="index.html">Home</a><a class="active" href="products.html">Products</a><a href="applications.html">Applications</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><div class="nav-cta"><a href="contact.html">Request samples</a></div><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button></div></header>
-  <aside class="mobile-menu"><nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="applications.html">Applications</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><small>Apex Polycoat Solutions · Engineered surfaces</small></aside>
-  <main>
-    <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / <span>Products</span></div><p class="eyebrow light">Material portfolio</p><h1 class="display">Designed by touch.<br>Defined by performance.</h1><p>Discover versatile coated fabric constructions across four application families, each adaptable in colour, grain and finish.</p></div></section>
-    <section class="section"><div class="container"><div class="section-head reveal"><div><p class="eyebrow">Browse collections</p><h2 class="section-title">Find your surface.</h2></div><p class="section-copy">Use the filters to explore representative material families. Contact us to discuss specifications, colourways and samples.</p></div>
-      <div class="filter-bar reveal" role="group" aria-label="Filter materials"><button class="filter-btn active" data-filter="all">All materials</button><button class="filter-btn" data-filter="automotive">Automotive</button><button class="filter-btn" data-filter="furnishing">Furnishing</button><button class="filter-btn" data-filter="footwear">Footwear</button><button class="filter-btn" data-filter="lifestyle">Lifestyle</button></div>
-      <div class="catalog-grid reveal" id="catalogGrid">
-        <article class="catalog-card" data-category="automotive"><div class="material-swatch" style="--swatch:#823d28"></div><div class="catalog-info"><div class="catalog-meta"><span>Automotive</span><span>APX 101</span></div><h3>Veloce Grain</h3><p>Balanced softness and surface resilience for seating and trim.</p><div class="properties"><span>Low gloss</span><span>Fine grain</span><span>Durable</span></div></div></article>
-        <article class="catalog-card" data-category="furnishing"><div class="material-swatch" style="--swatch:#384537"></div><div class="catalog-info"><div class="catalog-meta"><span>Furnishing</span><span>APX 204</span></div><h3>Atelier Pebble</h3><p>Rich pebble character with a warm, supple handle.</p><div class="properties"><span>Soft touch</span><span>Pebble</span><span>Easy care</span></div></div></article>
-        <article class="catalog-card" data-category="footwear"><div class="material-swatch" style="--swatch:#c2a376"></div><div class="catalog-info"><div class="catalog-meta"><span>Footwear</span><span>APX 307</span></div><h3>Stride Flex</h3><p>Flexible, clean-finishing surface developed for daily movement.</p><div class="properties"><span>Flexible</span><span>Matte</span><span>Consistent</span></div></div></article>
-        <article class="catalog-card" data-category="lifestyle"><div class="material-swatch" style="--swatch:#293b48"></div><div class="catalog-info"><div class="catalog-meta"><span>Lifestyle</span><span>APX 412</span></div><h3>Studio Nappa</h3><p>A smooth contemporary finish for bags and small leather goods.</p><div class="properties"><span>Smooth</span><span>Supple</span><span>Versatile</span></div></div></article>
-        <article class="catalog-card" data-category="furnishing"><div class="material-swatch" style="--swatch:#d1c6ad"></div><div class="catalog-info"><div class="catalog-meta"><span>Furnishing</span><span>APX 218</span></div><h3>Contract Weave</h3><p>A textile-inspired grain for hospitality and high-use interiors.</p><div class="properties"><span>Textile grain</span><span>Contract</span><span>Cleanable</span></div></div></article>
-        <article class="catalog-card" data-category="automotive"><div class="material-swatch" style="--swatch:#262626"></div><div class="catalog-info"><div class="catalog-meta"><span>Automotive</span><span>APX 126</span></div><h3>Carbon Micro</h3><p>Technical micro-texture with a controlled, modern sheen.</p><div class="properties"><span>Micro grain</span><span>Technical</span><span>Low sheen</span></div></div></article>
-        <article class="catalog-card" data-category="footwear"><div class="material-swatch" style="--swatch:#752d32"></div><div class="catalog-info"><div class="catalog-meta"><span>Footwear</span><span>APX 329</span></div><h3>Form Classic</h3><p>Timeless grain and rich colour for structured footwear uppers.</p><div class="properties"><span>Structured</span><span>Rich colour</span><span>Embossable</span></div></div></article>
-        <article class="catalog-card" data-category="lifestyle"><div class="material-swatch" style="--swatch:#aa7542"></div><div class="catalog-info"><div class="catalog-meta"><span>Lifestyle</span><span>APX 436</span></div><h3>Craft Suede</h3><p>A soft, directional surface with understated visual depth.</p><div class="properties"><span>Soft nap</span><span>Warm touch</span><span>Crafted</span></div></div></article>
-        <article class="catalog-card" data-category="furnishing"><div class="material-swatch" style="--swatch:#6d7067"></div><div class="catalog-info"><div class="catalog-meta"><span>Furnishing</span><span>APX 241</span></div><h3>Terra Matte</h3><p>Quiet, mineral-inspired colour and an architectural matte finish.</p><div class="properties"><span>Ultra matte</span><span>Modern</span><span>Soft hand</span></div></div></article>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore Apex Polycoat Solutions' leatherette collections for automotive, furnishing, footwear and lifestyle applications."
+    />
+    <title>Products — Apex Polycoat Solutions</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">A</span
+          ><span class="brand-copy"
+            ><strong>Apex Polycoat</strong><span>Material solutions</span></span
+          ></a
+        >
+        <nav class="desktop-nav">
+          <a href="index.html">Home</a
+          ><a class="active" href="products.html">Products</a
+          ><a href="applications.html">Applications</a
+          ><a href="about.html">About</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta"><a href="contact.html">Request samples</a></div>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
       </div>
-    </div></section>
-    <section class="cta-band"><div class="container cta-inner reveal"><h2>Need a colour, grain or construction of your own?</h2><a class="btn btn-light" href="contact.html">Start a brief</a></div></section>
-  </main>
-  <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-copy"><strong>Apex Polycoat</strong><span>Material solutions</span></span></a><p data-site-field="footer_description">Performance leatherette and coated fabric solutions developed for modern products and spaces.</p></div><div class="footer-col"><h4>Navigate</h4><a href="products.html">Products</a><a href="applications.html">Applications</a><a href="about.html">About us</a></div><div class="footer-col"><h4>Connect</h4><a href="contact.html">Request samples</a><a href="contact.html">Send an enquiry</a></div><div class="footer-col"><h4>Applications</h4><p>Automotive · Furnishing<br>Footwear · Lifestyle</p></div></div><div class="footer-bottom"><span>© <span data-year></span> <span data-site-field="company_name">Apex Polycoat Solutions</span>.</span><span>Engineered surfaces · Considered performance</span></div></div></footer><div class="toast" role="status"></div>
-</body></html>
+    </header>
+    <aside class="mobile-menu">
+      <nav>
+        <a href="index.html">Home</a><a href="products.html">Products</a
+        ><a href="applications.html">Applications</a
+        ><a href="about.html">About</a><a href="contact.html">Contact</a>
+      </nav>
+      <small>Apex Polycoat Solutions · Engineered surfaces</small>
+    </aside>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> / <span>Products</span>
+          </div>
+          <p class="eyebrow light">Material portfolio</p>
+          <h1 class="display">
+            Designed by touch.<br />Defined by performance.
+          </h1>
+          <p>
+            Discover versatile coated fabric constructions across four
+            application families, each adaptable in colour, grain and finish.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Browse collections</p>
+              <h2 class="section-title">Find your surface.</h2>
+            </div>
+            <p class="section-copy">
+              Use the filters to explore representative material families.
+              Contact us to discuss specifications, colourways and samples.
+            </p>
+          </div>
+          <div
+            class="filter-bar reveal"
+            role="group"
+            aria-label="Filter materials"
+          >
+            <button class="filter-btn active" data-filter="all">
+              All materials</button
+            ><button class="filter-btn" data-filter="automotive">
+              Automotive</button
+            ><button class="filter-btn" data-filter="furnishing">
+              Furnishing</button
+            ><button class="filter-btn" data-filter="footwear">Footwear</button
+            ><button class="filter-btn" data-filter="lifestyle">
+              Lifestyle
+            </button>
+          </div>
+          <div class="catalog-grid reveal" id="catalogGrid">
+            <article class="catalog-card" data-category="automotive">
+              <div class="material-swatch" style="--swatch: #823d28"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Automotive</span><span>APX 101</span>
+                </div>
+                <h3>Veloce Grain</h3>
+                <p>
+                  Balanced softness and surface resilience for seating and trim.
+                </p>
+                <div class="properties">
+                  <span>Low gloss</span><span>Fine grain</span
+                  ><span>Durable</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="furnishing">
+              <div class="material-swatch" style="--swatch: #384537"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Furnishing</span><span>APX 204</span>
+                </div>
+                <h3>Atelier Pebble</h3>
+                <p>Rich pebble character with a warm, supple handle.</p>
+                <div class="properties">
+                  <span>Soft touch</span><span>Pebble</span
+                  ><span>Easy care</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="footwear">
+              <div class="material-swatch" style="--swatch: #c2a376"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Footwear</span><span>APX 307</span>
+                </div>
+                <h3>Stride Flex</h3>
+                <p>
+                  Flexible, clean-finishing surface developed for daily
+                  movement.
+                </p>
+                <div class="properties">
+                  <span>Flexible</span><span>Matte</span><span>Consistent</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="lifestyle">
+              <div class="material-swatch" style="--swatch: #293b48"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Lifestyle</span><span>APX 412</span>
+                </div>
+                <h3>Studio Nappa</h3>
+                <p>
+                  A smooth contemporary finish for bags and small leather goods.
+                </p>
+                <div class="properties">
+                  <span>Smooth</span><span>Supple</span><span>Versatile</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="furnishing">
+              <div class="material-swatch" style="--swatch: #d1c6ad"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Furnishing</span><span>APX 218</span>
+                </div>
+                <h3>Contract Weave</h3>
+                <p>
+                  A textile-inspired grain for hospitality and high-use
+                  interiors.
+                </p>
+                <div class="properties">
+                  <span>Textile grain</span><span>Contract</span
+                  ><span>Cleanable</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="automotive">
+              <div class="material-swatch" style="--swatch: #262626"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Automotive</span><span>APX 126</span>
+                </div>
+                <h3>Carbon Micro</h3>
+                <p>Technical micro-texture with a controlled, modern sheen.</p>
+                <div class="properties">
+                  <span>Micro grain</span><span>Technical</span
+                  ><span>Low sheen</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="footwear">
+              <div class="material-swatch" style="--swatch: #752d32"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Footwear</span><span>APX 329</span>
+                </div>
+                <h3>Form Classic</h3>
+                <p>
+                  Timeless grain and rich colour for structured footwear uppers.
+                </p>
+                <div class="properties">
+                  <span>Structured</span><span>Rich colour</span
+                  ><span>Embossable</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="lifestyle">
+              <div class="material-swatch" style="--swatch: #aa7542"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Lifestyle</span><span>APX 436</span>
+                </div>
+                <h3>Craft Suede</h3>
+                <p>
+                  A soft, directional surface with understated visual depth.
+                </p>
+                <div class="properties">
+                  <span>Soft nap</span><span>Warm touch</span
+                  ><span>Crafted</span>
+                </div>
+              </div>
+            </article>
+            <article class="catalog-card" data-category="furnishing">
+              <div class="material-swatch" style="--swatch: #6d7067"></div>
+              <div class="catalog-info">
+                <div class="catalog-meta">
+                  <span>Furnishing</span><span>APX 241</span>
+                </div>
+                <h3>Terra Matte</h3>
+                <p>
+                  Quiet, mineral-inspired colour and an architectural matte
+                  finish.
+                </p>
+                <div class="properties">
+                  <span>Ultra matte</span><span>Modern</span
+                  ><span>Soft hand</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="container cta-inner reveal">
+          <h2>Need a colour, grain or construction of your own?</h2>
+          <a class="btn btn-light" href="contact.html">Start a brief</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="brand" href="index.html"
+              ><span class="brand-mark">A</span
+              ><span class="brand-copy"
+                ><strong>Apex Polycoat</strong
+                ><span>Material solutions</span></span
+              ></a
+            >
+            <p data-site-field="footer_description">
+              Performance leatherette and coated fabric solutions developed for
+              modern products and spaces.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Navigate</h4>
+            <a href="products.html">Products</a
+            ><a href="applications.html">Applications</a
+            ><a href="about.html">About us</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="contact.html">Request samples</a
+            ><a href="contact.html">Send an enquiry</a>
+          </div>
+          <div class="footer-col">
+            <h4>Applications</h4>
+            <p>Automotive · Furnishing<br />Footwear · Lifestyle</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span data-year></span>
+            <span data-site-field="company_name">Apex Polycoat Solutions</span
+            >.</span
+          ><span>Engineered surfaces · Considered performance</span>
+        </div>
+      </div>
+    </footer>
+    <div class="toast" role="status"></div>
+  </body>
+</html>
