@@ -1,0 +1,4 @@
+data/apex.db
+data/apex.db-shm
+data/apex.db-wal
+__pycache__/
