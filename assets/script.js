@@ -1,5 +1,7 @@
 import { defaultProducts, getCategories, getProducts, getSite } from "./firebase-service.js";
 
+const ENQUIRY_ENDPOINT = "https://formsubmit.co/ajax/contact@apexpolycoat.com";
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const menuButton = document.querySelector('.menu-toggle');
@@ -123,15 +125,53 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPublicContent();
 
   document.querySelectorAll('[data-enquiry-form]').forEach(form => {
-    form.addEventListener('submit', event => {
+    form.addEventListener('submit', async event => {
       event.preventDefault();
       const toast = document.querySelector('.toast');
-      if (toast) {
-        toast.textContent = 'Thank you — your enquiry has been recorded. Our team will get back to you soon.';
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 4500);
+      const button = form.querySelector('button[type="submit"]');
+      const originalButtonText = button?.textContent;
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Sending…';
       }
-      form.reset();
+
+      try {
+        const response = await fetch(ENQUIRY_ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new URLSearchParams({
+            ...Object.fromEntries(new FormData(form)),
+            _subject: 'New enquiry from Apex Polycoat website',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.success === false) throw new Error('Unable to send enquiry.');
+
+        if (toast) {
+          toast.classList.remove('error');
+          toast.textContent = 'Thank you — your enquiry has been sent. Our team will get back to you soon.';
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 4500);
+        }
+        form.reset();
+      } catch (_) {
+        if (toast) {
+          toast.classList.add('error', 'show');
+          toast.textContent = 'We could not send your enquiry. Please email contact@apexpolycoat.com directly.';
+          setTimeout(() => toast.classList.remove('error', 'show'), 5500);
+        }
+        // Keep a native POST fallback when a browser blocks the AJAX request.
+        window.setTimeout(() => HTMLFormElement.prototype.submit.call(form), 250);
+        return;
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.textContent = originalButtonText;
+        }
+      }
     });
   });
 

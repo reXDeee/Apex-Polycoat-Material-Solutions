@@ -56,7 +56,7 @@ export const defaultProducts = [
 
 export const defaultSite = {
   company_name: "Apex Polycoat Solutions",
-  email: "",
+  email: "contact@apexpolycoat.com",
   phone: "",
   address: "",
   footer_description: "Performance leatherette and coated fabric solutions developed for modern products and spaces."

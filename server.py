@@ -29,8 +29,8 @@ class StaticHandler(BaseHTTPRequestHandler):
             "img-src 'self' data: blob: https://*.googleusercontent.com https://*.firebasestorage.app https://firebasestorage.googleapis.com; "
             "style-src 'self' 'unsafe-inline'; "
             "script-src 'self' https://www.gstatic.com; "
-            "connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://firebasestorage.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; "
-            "object-src 'none'; base-uri 'self'; form-action 'self'"
+            "connect-src 'self' https://formsubmit.co https://*.googleapis.com https://*.firebaseio.com https://firebasestorage.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; "
+            "object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co"
         )
         super().end_headers()
 

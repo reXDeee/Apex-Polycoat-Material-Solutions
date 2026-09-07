@@ -78,10 +78,10 @@
               <div class="contact-item">
                 <span>General</span>Company, supply and partnership enquiries
               </div>
-              <div class="contact-item" data-site-wrapper="email">
+              <div class="contact-item">
                 <span>Email</span>
-                <a data-site-field="email" href="apexpolycoat@protonmail.com"
-                  >contact@apexpolycoat.com </br> sales@apexpolycoat.com
+                <a href="mailto:contact@apexpolycoat.com"
+                  >contact@apexpolycoat.com
                 </a>
               </div>
               <div class="contact-item" data-site-wrapper="phone">
@@ -99,7 +99,12 @@
               </div>
             </div>
           </aside>
-          <form class="contact-form reveal" data-enquiry-form>
+          <form
+            class="contact-form reveal"
+            data-enquiry-form
+            action="https://formsubmit.co/contact@apexpolycoat.com"
+            method="POST"
+          >
             <div class="form-grid">
               <div class="field">
                 <label for="name">Your name *</label
@@ -171,6 +176,10 @@
                 ></textarea>
               </div>
             </div>
+            <input type="hidden" name="_subject" value="New enquiry from Apex Polycoat website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input class="form-honey" name="_honey" tabindex="-1" autocomplete="off" />
             <button class="btn btn-dark" type="submit">Send enquiry</button>
           </form>
         </div>
