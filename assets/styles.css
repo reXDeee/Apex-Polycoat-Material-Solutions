@@ -90,7 +90,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 38px;
   height: 38px;
   flex: 0 0 38px;
-  object-fit: cover;
+  object-fit: contain;
   mix-blend-mode: multiply;
 }
 .brand-copy { display: flex; flex-direction: column; line-height: 1.05; }
